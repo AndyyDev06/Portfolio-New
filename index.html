@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Andrew Brown</p>
+      </div>
+    </header>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p class="centered-description" id="aboutText">
+        Hello! I'm <span class="code">Andrew Brown</span>, a
+        <span class="code">17-year-old</span>
+        <span class="code">self-taught</span>
+        <span class="code">full-stack developer</span>. I have a passion for
+        <span class="code">coding</span> and enjoy creating
+        <span class="code">dynamic</span> and
+        <span class="code">interactive</span> web applications. My journey in
+        web development started from <span class="code">curiosity</span> and a
+        desire to build things that can make an impact.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project 1</h3>
+        <p>Description of project 1.</p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Description of project 2.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Andrew Brown. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const aboutText = document.getElementById("aboutText");
+        const words = aboutText.innerText.split(" ");
+        aboutText.innerHTML = ""; // Clear original text
+        words.forEach((word, index) => {
+          const span = document.createElement("span");
+          span.textContent = word + " ";
+          const colorIndex = index % 5; // Use modulus to cycle through 5 colors
+          switch (colorIndex) {
+            case 0:
+              span.classList.add("color-1");
+              break;
+            case 1:
+              span.classList.add("color-2");
+              break;
+            case 2:
+              span.classList.add("color-3");
+              break;
+            case 3:
+              span.classList.add("color-4");
+              break;
+            case 4:
+              span.classList.add("color-5");
+              break;
+            default:
+              span.classList.add("color-1");
+          }
+          aboutText.appendChild(span);
+        });
+      });
+    </script>
+  </body>
+</html>

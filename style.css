@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f8f8f2; /* Dracula theme foreground color */
+    background-color: #282a36; /* Dracula theme background color */
+    transition: all 0.3s ease;
+}
+
+header {
+    background-color: #44475a; /* Dracula theme selection background */
+    color: #bd93f9; /* Dracula theme purple */
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #bd93f9; /* Dracula theme purple */
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0.5em 0 0.2em;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.section {
+    padding: 4em 2em;
+    background-color: #44475a; /* Dracula theme selection background */
+    margin: 2em auto;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    color: #f8f8f2; /* Dracula theme foreground color */
+}
+
+.section h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: 400;
+    color: #bd93f9; /* Dracula theme purple */
+}
+
+.project {
+    border: 1px solid #bd93f9; /* Dracula theme purple */
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 15px;
+    background-color: #6272a4; /* Dracula theme current line */
+}
+
+footer {
+    background-color: #44475a; /* Dracula theme selection background */
+    color: #bd93f9; /* Dracula theme purple */
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 1em;
+}
+
+form input, form textarea, form button {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid #6272a4; /* Dracula theme current line */
+    border-radius: 5px;
+}
+
+form input, form textarea {
+    background-color: #282a36; /* Dracula theme background */
+    color: #f8f8f2; /* Dracula theme foreground color */
+}
+
+form button {
+    background-color: #bd93f9; /* Dracula theme purple */
+    color: #f8f8f2; /* Dracula theme foreground color */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff79c6; /* Dracula theme pink */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .section {
+        max-width: 95%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section, .header-content, footer, form {
+    animation: fadeIn 1s ease-in;
+}
+
+.centered-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+.code {
+    font-weight: bold;
+}
+
+.even-word {
+    color: #ff79c6; /* Dracula theme pink */
+}
+
+.odd-word {
+    color: #50fa7b; /* Dracula theme green */
+}
+
+.color-1 {
+    color: #ff79c6; /* Dracula theme pink */
+}
+
+.color-2 {
+    color: #50fa7b; /* Dracula theme green */
+}
+
+.color-3 {
+    color: #f1fa8c; /* Dracula theme yellow */
+}
+
+.color-4 {
+    color: #bd93f9; /* Dracula theme purple */
+}
+
+.color-5 {
+    color: #8be9fd; /* Dracula theme cyan */
+}
